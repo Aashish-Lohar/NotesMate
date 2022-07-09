@@ -1,0 +1,18 @@
+<div class="main-container">
+    <div class="search-bar-container">
+        <div class="control has-icons-left has-icons-right">
+            <input class="input search-icon is-small" #input (keyup)="filter(input.value)" type="search" placeholder="Filter">
+        
+          </div>
+    </div>
+    <div class="notes-list">
+      <app-note-card
+       *ngFor="let n of filteredNotes;
+       index as i" 
+       [link]="i"
+       (delete)="deleteNote(i)"
+       [title]="n.title"
+       [body]="n.body"></app-note-card>
+    </div>
+    <button class="button floating-add-button is-primary" routerLink="new">+ ADD</button>
+</div>

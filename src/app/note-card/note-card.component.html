@@ -1,0 +1,17 @@
+<div #container class="note-card-container card">
+    <a routerLink="{{link}}" >
+        <div class="note-card-content card-content">
+            <h1 class="note-card-title  card-title">
+                {{title}}
+            </h1>
+            <div #bodytext class="note-card-body ">
+            <p>{{body}}</p> 
+            <div #truncator class="fade-out-truncation">
+    
+            </div>   
+            </div>
+        </div>
+
+    </a>
+    <div class="x-button" (click)="ondelete(link)"></div>
+</div>

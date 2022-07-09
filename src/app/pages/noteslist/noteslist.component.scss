@@ -1,0 +1,37 @@
+@import '../../style.scss';
+.main-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin:0 auto;
+    padding-top: 50px;
+    .search-bar-container{
+        
+         .has-icons-left{
+            .search-icon{
+                padding: 0 !important;
+                padding-left: 50px;
+                text-align: center;
+                font-size: 24px;
+                background:rgb(226, 224, 224) url("https://static.thenounproject.com/png/101791-200.png") no-repeat;
+                background-position: 10px 15px;
+                background-size: 20px;
+            }
+         }
+    }
+    .notes-list{
+        margin-top: 35px;
+    }
+    app-note-card{
+        display: block;
+    }
+    .floating-add-button{
+        position: fixed;
+        bottom: 0;
+        width: 500px;
+        border-radius: 0;
+        box-shadow: 0 0 15px 5px rgba($purple,0.2);
+        height: 68px;
+        font-size: 24px;
+    }
+}

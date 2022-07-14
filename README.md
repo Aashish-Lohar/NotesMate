@@ -1,5 +1,11 @@
 # NotesMate
 
+Notes Mate a web app, which is used for note down you pending tasks or things to remember.
+It contains most of angular features like routing, services, etc. and deployed on firebase.
+
+# Deploy on firebase 
+Live link:  https://notes-mate.web.app/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
 ## Development server

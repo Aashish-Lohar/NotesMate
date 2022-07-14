@@ -1,2 +1,0 @@
-Notes Mate a web app, which is used for note down you pending tasks or things to remember.
-It contains most of angular features like routing, services, etc. and deployed on firebase.

@@ -1,4 +1,5 @@
 @import '../../style.scss';
+// @import '../../mixin.scss';
 .main-container{
     display: flex;
     flex-direction: column;
@@ -19,6 +20,9 @@
             }
          }
     }
+    @include for-phone-only {
+        max-width: 320px;
+    }
     .notes-list{
         margin-top: 35px;
     }
@@ -33,5 +37,10 @@
         box-shadow: 0 0 15px 5px rgba($purple,0.2);
         height: 68px;
         font-size: 24px;
+        @include for-phone-only{
+            max-width: 320px;
+            border-radius: 5px;
+            
+        }
     }
 }

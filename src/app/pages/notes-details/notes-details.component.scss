@@ -3,6 +3,9 @@
     max-width: 500px;
     margin: auto;
     margin-top: 50px;
+    @include for-phone-only{
+        max-width: 300px;
+    }
 }
 
 input,textarea{

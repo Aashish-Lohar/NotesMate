@@ -3,6 +3,7 @@
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 @import '../../node_modules/bulma/bulma.sass';
+@import '../app/mixin.scss';
 // Set your brand colors
 $purple: #a59ad7;
 $pink: #fe76c2;

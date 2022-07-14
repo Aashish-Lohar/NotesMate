@@ -11,7 +11,7 @@ import { Notes } from 'src/assets/notes.model';
 })
 export class NotesDetailsComponent implements OnInit {
   notes!:Notes;
-  noteId!:number;
+  noteId!:string;
   new!:boolean;
   constructor(private noteService:NotesService, private router:Router,private route:ActivatedRoute) {
     this.notes=new Notes();
@@ -20,10 +20,8 @@ export class NotesDetailsComponent implements OnInit {
   ngOnInit(): void {
     //we want to find if we are creating a new note or editing an existing one
     this.noteId=this.route.snapshot.params['id'];
-    if(this.noteService.get(this.noteId)){
-      console.log("in notesdetails",this.noteId)
+    if(this.noteId!='new'){
       this.notes=this.noteService.get(this.noteId);
-      console.log("in notesdetails",this.notes)
       this.new=false
     }
     else{
@@ -37,7 +35,6 @@ export class NotesDetailsComponent implements OnInit {
     }
     else{
       this.noteService.update(this.noteId,form.value.title,form.value.body)
-      console.log("in notesdetails onsubmit")
       this.router.navigateByUrl('/')
     }
   }

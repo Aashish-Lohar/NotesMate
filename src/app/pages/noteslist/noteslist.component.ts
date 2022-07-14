@@ -40,7 +40,6 @@ export class NoteslistComponent implements OnInit {
     this.filteredNotes=uniqueresults;
   }
   removeDuplicate(arr:any[]):any[]{
-    console.log("in removeDuplicate",arr)
     let unique:Set<any>=new Set<any>();
     arr.forEach(e=>unique.add(e));
     return Array.from(unique)
